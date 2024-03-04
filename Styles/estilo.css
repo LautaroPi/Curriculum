@@ -1,0 +1,347 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #091921;
+    position: relative;
+}
+
+body::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#2196f3, #e91e63);
+    clip-path: circle(45% at 10% 10%);
+    
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 0; /* Mantenemos top para estar en el extremo superior */
+    left: 0; /* Mantenemos left para estar en el extremo izquierdo */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#e91e63, #1a75be);
+    clip-path: circle(30% at 90% 90%);
+    z-index: -1;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    overflow: hidden;
+    backdrop-filter: blur(25px);
+    margin: 2rem; /* Cambio a una unidad relativa */
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Ajuste de la sombra */
+}
+
+.container .left_side {
+    position: relative;
+    background: rgba(255, 255, 255, 0.04);
+    padding: 2rem; /* Cambio a una unidad relativa */
+    border-radius: 6px 0 0 6px; /* Simplificación de los bordes redondeados */
+}
+
+.profileText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 8px; /* Cambio de padding a margin para agregar espacio debajo */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.profileText .imgBox
+ {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Borde redondo */
+    overflow: hidden; /* Ocultar cualquier contenido que se desborde */
+    display: flex;
+    align-items: center; /* Centrar vertical y horizontalmente */
+    justify-content: center;
+}
+
+.imgBox img {
+    position: absolute;
+    max-width: 500%; /* Establece el ancho máximo al 100% del contenedor */
+    max-height: 105%; /* Establece la altura máxima al 100% del contenedor */
+    object-fit: cover;
+}
+
+.profileText h2{
+    color: #fff;
+    font-size: 1em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+
+.profileText h2 span
+{
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+.contactInfo
+{
+    padding-top: 25px;
+}
+
+.title
+{
+    color:#fff;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.contactInfo a {
+    color: inherit; /* Hereda el color del texto de su contenedor */
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+.contactInfo ul
+{
+    position: relative;
+}
+
+.contactInfo ul li
+{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.contactInfo ul li .icon
+{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+}
+
+.contactInfo ul li span
+{
+    color: #fff;
+    font-weight: 300;
+}
+
+.contactInfo.academy li
+{
+    margin-bottom: 15px;
+}
+
+.contactInfo.academy h5
+{
+    color:rgb(45, 243, 243);
+    font-weight: 500;
+}
+
+.contactInfo.academy h4:nth-child(15)
+{
+    color: #fff;
+    font-weight: 500;
+}
+
+.contactInfo.academy h4
+{
+    color: #fff;
+    font-weight: 150;
+}
+
+.contactInfo.skills .porcent
+{
+    position: relative;
+    width: 70%;
+    height: 6px;
+    background: #00121a;
+    display: block;
+    margin-top: 5px;
+}
+
+.contactInfo.skills .porcent div
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background:rgb(45, 243, 243);
+}
+
+.percent-number {
+    font-size: 15px;
+    color: #fff;
+    margin-left: 200px;
+    margin-top: -8px;
+    position: absolute;
+}
+
+
+.container .right_side
+{
+    position: relative;
+    background: rgba(255, 255, 255, 0.28);
+    padding: 40px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    
+}
+
+.about
+{
+    margin-bottom: 35px;
+
+}
+
+.about:last-child
+{
+    margin-bottom: 0;
+}
+
+.title2
+{
+    color: #003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #003147;; /* Puedes ajustar el color y grosor de la línea */
+    padding-bottom: 5px; /* Añade un espacio entre el título y la línea */
+    margin-bottom: 5px; /* Añade un espacio adicional después de la línea */
+    
+}
+
+p 
+{
+    color: rgb(0, 0, 0);
+    text-align: justify;
+}
+
+.about .box
+{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.about .box .año_lugar
+{
+    min-width: 150px;
+    margin-right: 20px;
+}
+
+.about .box .año_lugar h5
+{
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 300;
+}
+
+.about .box .text h4
+{
+    text-transform: uppercase;
+    color:#ffffff;
+    font-size: 16px;
+    border-bottom: 1px solid #ffffff;; /* Puedes ajustar el color y grosor de la línea */
+    padding-bottom: 5px; /* Añade un espacio entre el título y la línea */
+    margin-bottom: 5px;
+}
+
+.about.certifications ul 
+{
+    position: relative;
+}
+
+.about.certifications ul li {
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.about.certifications ul li a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.interest ul
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.interest ul li
+{
+    list-style: none;
+    color: inherit;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.interest ul li .fa
+{
+    color: #e9e9e9;
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+@media (max-width: 1000px)
+{
+    .container
+    {
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .interest ul
+    {
+        grid-template-columns: repeat(2,1fr);
+
+    }
+}
+
+@media (max-width: 600px)
+{
+    .about .box
+    {
+        flex-direction: column;
+    }
+    .about .box .año_lugar
+    {
+        margin-bottom: 5px;
+    }
+    .interest ul
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .skills .box
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
